@@ -98,6 +98,19 @@ www.roblox.com/catalog/6678172953/AJs-Blaster-the-Bahemoth
 
 
 --aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+local SwitchUp = "SwitchUp.mp3"
+local TillItsOver = "Till_Its_Over.mp3"
+if not isfile(SwitchUp) then
+    game:GetService("StarterGui"):SetCore("SendNotification", { 
+	    Title = "Downloading some Files (mp3)";
+	    Text = "Wait...";
+	    Icon = "rbxthumb://type=Asset&id=1030775394&w=150&h=150"})
+    Duration = 7
+    writefile(SwitchUp, game:HttpGet("https://drive.google.com/uc?export=download&id=1p_Qe1133T6hhQXSJU4Y0pyqDHrOIq_3l"))
+end
+if not isfile(TillItsOver) then
+    writefile(TillItsOver, game:HttpGet("https://drive.google.com/uc?export=download&id=1FNifmA1fRcEGmynb4DC7puNLIt_Vxel4"))
+end
 repeat
 wait()
 until game:GetService("Players").LocalPlayer.Character:FindFirstChild("Starslayer Railgun") or game:GetService("Players").LocalPlayer.Character:FindFirstChild("PogoStick") or game:GetService("Players").LocalPlayer.Character:FindFirstChild("AJBackAccessory")
