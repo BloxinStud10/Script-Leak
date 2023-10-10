@@ -2,6 +2,7 @@
 --|| Script Made by PityPolyGon or Shackluster
 --|| Converted by Epiconister (or simply call me Epic)
 --|| Reanimate: Emper Reanimate (By Emper)
+--|| What ur "edit" Melon? It just a regular Emper_Reanimate Beta
 --\\====================================================//--
 
 --List of hats
@@ -592,7 +593,6 @@ BindableEvent:GetPropertyChangedSignal("Parent"):Connect(Event)
 
 local char = game:GetService("Players").LocalPlayer.Character
 local script = game:GetObjects("rbxassetid://7400411100")[1].Mimicry
-script.Parent = char
 
 local MODULE = script
 local CHARACTER = char
@@ -1195,7 +1195,8 @@ function Slaughter(WHO)
 	ManSlaughter(WHO)
 end
 
-print([[
+print[[
+
 --//====================================================\\--
 --|| (FE) Mimicry
 --|| Script Made by PityPolyGon or Shackluster
