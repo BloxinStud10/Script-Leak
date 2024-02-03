@@ -164,7 +164,7 @@ local NewGuiPart162 = Instance.new("BindableFunction")
 local NewGuiPart163 = Instance.new("BindableEvent")
 -- Properties
 
-NewGuiPart1.Name = "Dex"
+NewGuiPart1.Name = string.char(math.random(14,64))
 
 NewGuiPart2.Name = "PropertiesFrame"
 NewGuiPart2.Parent = NewGuiPart1
@@ -1702,8 +1702,7 @@ NewGuiPart152.TextWrapped = true
 return NewGuiPart1
 end
 local D_E_X = CreateGui()
-D_E_X.ResetOnSpawn = false
-D_E_X.Parent = game.Players.LocalPlayer.PlayerGui
+D_E_X.Parent = game.CoreGui
 
 spawn(function()
 	local Gui = D_E_X
@@ -3384,10 +3383,10 @@ SetZIndexOnChanged(explorerPanel)
 local function CreateColor3(r, g, b) return Color3.new(r/255,g/255,b/255) end
 
 local Styles = {
-	Font = Enum.Font.Arial;
+	Font = Enum.Font.Code;
 	Margin = 5;
 	Black = CreateColor3(0,0,0);
-	White = CreateColor3(255,255,255);
+	White = CreateColor3(50,50,50);
 }
 
 local DropDown = {
@@ -5971,7 +5970,7 @@ local Styles = {
 	Font = Enum.Font.Arial;
 	Margin = 5;
 	Black = CreateColor3(0,0,0);
-	White = CreateColor3(255,255,255);
+	White = CreateColor3(125,125,125);
 }
 
 local Row = {
@@ -8672,10 +8671,8 @@ openEvent.Event:connect(function(...)
 end)
 
 clipboardButton.MouseButton1Click:connect(function()
-	if Clipboard and Clipboard.set then
-		Clipboard.set(currentSource)
-	elseif CopyString then
-		CopyString(currentSource)
+	if setclipboard then
+	    setclipboard(currentSource)
 	end
 end)
 
