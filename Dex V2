@@ -3386,7 +3386,7 @@ local Styles = {
 	Font = Enum.Font.Code;
 	Margin = 5;
 	Black = CreateColor3(0,0,0);
-	White = CreateColor3(50,50,50);
+	White = CreateColor3(255,255,255);
 }
 
 local DropDown = {
@@ -5970,7 +5970,7 @@ local Styles = {
 	Font = Enum.Font.Arial;
 	Margin = 5;
 	Black = CreateColor3(0,0,0);
-	White = CreateColor3(125,125,125);
+	White = CreateColor3(255,255,255);
 }
 
 local Row = {
